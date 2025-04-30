@@ -19,6 +19,16 @@ document.getElementById('generateLinkBtn').addEventListener('click', function ()
         
         const link = gerarLink(fullPath);
         document.getElementById('result').textContent = `Link gerado: ${link}`;
+        
+        const copyLinkBtn = document.getElementById('copyLinkBtn');
+        copyLinkBtn.style.display = 'flex';
+        copyLinkBtn.style.justifyContent = 'space-between';
+
+        copyLinkBtn.addEventListener('click', function() {
+            navigator.clipboard.writeText(link).then(() => {
+                alert('Link copiado para a área de transferência!');
+            });
+        });
     } else {
         document.getElementById('result').textContent = 'Por favor, selecione um arquivo e insira o caminho manualmente.';
     }
