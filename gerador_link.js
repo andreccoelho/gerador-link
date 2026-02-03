@@ -36,7 +36,7 @@ document.getElementById('generateLinkBtn').addEventListener('click', function ()
 
 function gerarLink(filePath) {
     const caminhoAntigo = "\\bndes.net\\bndes\\Aplicacoes\\SiteBNDES\\4.PRD";
-    const novoDominio = "http://www.bndes.gov.br";
+    const novoDominio = "https://www.bndes.gov.br";
 
     let caminhoFinal = filePath.replace(/\\/g, '/'); 
 
@@ -48,3 +48,4 @@ function gerarLink(filePath) {
     
     return caminhoFinal;
 }
+
